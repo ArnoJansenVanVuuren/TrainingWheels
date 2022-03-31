@@ -1,0 +1,16 @@
+<div class="jokeContainer">
+    <div class="jokeSelect">
+        <Label><strong>Categories : </strong></Label>
+        <input class="radioJoke" type="radio" name="jokeType" id="programing" value="programing" (change)="getJokeCategories('Programing')"><label>Programing</label>
+        <input class="radioJoke" type="radio" name="jokeType" id="misc" value="misc" (change)="getJokeCategories('Miscellaneous')"><label>Misc</label>
+        <input class="radioJoke" type="radio" name="jokeType" id="dark" value="dark" (change)="getJokeCategories('Dark')"><label>Dark</label>
+        <input class="radioJoke" type="radio" name="jokeType" id="pun" value="pun" (change)="getJokeCategories('Pun')"><label>Pun</label>
+        <input class="radioJoke" type="radio" name="jokeType" id="spooky" value="spooky" (change)="getJokeCategories('Spooky')"><label>Spooky</label>
+        <input class="radioJoke" type="radio" name="jokeType" id="christmas" value="christmas" (change)="getJokeCategories('Christmas')"><label>Christmas</label><br>
+        <Label><strong>Contains : </strong></Label>
+        <input [(ngModel)]='jokeTextBox' id="jokeContains" type="textbox"><br>
+        <button class="button" (click)="getJoke()">Tel me</button></div>
+</div>
+<div class="jokeDisplay">
+    <p *ngFor="let joke of jokeArray">{{joke}}</p>
+</div>

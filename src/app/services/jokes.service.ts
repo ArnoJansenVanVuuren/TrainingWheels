@@ -14,5 +14,10 @@ export class JokesService {
   getJokeFromServer(jokeCategories: any, jokeContains: string): Observable<JokeI> {
     let params = new HttpParams().set('contains', jokeContains);
     return this.http.get<JokeI>('https://v2.jokeapi.dev/joke/' + jokeCategories, { params });
+    //--- Can also be done as
+    // let payload = {
+    //   contains: jokeContains,
+    // };
+    // this.http.get<JokeI>('https://v2.jokeapi.dev/joke/' + jokeCategories, { params: payload });
   }
 }

@@ -13,7 +13,7 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 
 @NgModule({
   declarations: [AppComponent, JokesComponent, NavbarComponent, WelcomeComponent, LoginFormComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

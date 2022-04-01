@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "arno-jokes": {
+    "training-wheels": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,20 +20,14 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/arno-jokes",
+            "outputPath": "dist/training-wheels",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/purple-green.css", "src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -73,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "arno-jokes:build:production"
+              "browserTarget": "training-wheels:build:production"
             },
             "development": {
-              "browserTarget": "arno-jokes:build:development"
+              "browserTarget": "training-wheels:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "arno-jokes:build"
+            "browserTarget": "training-wheels:build"
           }
         },
         "test": {
@@ -95,19 +89,13 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "inlineStyleLanguage": "scss",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["./node_modules/@angular/material/prebuilt-themes/purple-green.css", "src/styles.scss"],
             "scripts": []
           }
         }
       }
     }
   },
-  "defaultProject": "arno-jokes"
+  "defaultProject": "training-wheels"
 }

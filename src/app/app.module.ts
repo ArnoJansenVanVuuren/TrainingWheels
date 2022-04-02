@@ -10,10 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
   declarations: [AppComponent, JokesComponent, NavbarComponent, WelcomeComponent, LoginFormComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, IonicModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,9 +1,13 @@
 <form [formGroup]="loginForm">
-<div class="login">
-    <label>Username: </label><input type="textbox" formControlName="username">
-    <div class="errors" *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"><strong>This username is not valid...</strong></div>
-    <label>Password: </label><input type="password" formControlName="password">
-    <div class="errors" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"><strong>This password is not valid...</strong></div>
+  <div class="login">
+    <label>Username: </label><ion-input formControlName="username"></ion-input>
+    <div class="errors" *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+      <strong>This username is not valid...</strong>
+    </div>
+    <label>Password: </label><input type="password" formControlName="password" />
+    <div class="errors" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+      <strong>This password is not valid...</strong>
+    </div>
     <button class="button" [disabled]="loginForm.invalid">Login</button>
-</div>
+  </div>
 </form>
